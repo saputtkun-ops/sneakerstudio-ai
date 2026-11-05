@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1A1A"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+    <linearGradient id="soleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#F1ECE3"/>
+      <stop offset="100%" stop-color="#E5E2DD"/>
+    </linearGradient>
+    <linearGradient id="leatherGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2A2A2A"/>
+      <stop offset="100%" stop-color="#1E1E1E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Latar Belakang Studio -->
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+  
+  <!-- Bayangan Sepatu -->
+  <ellipse cx="410" cy="415" rx="310" ry="22" fill="#000000" opacity="0.6"/>
+
+  <!-- Outsole & Midsole -->
+  <path d="M140 370 C 150 405, 230 405, 340 402 C 460 398, 590 402, 670 380 C 690 375, 680 345, 640 348 C 550 355, 430 350, 310 354 C 220 357, 135 348, 140 370 Z" fill="url(#soleGrad)"/>
+  
+  <!-- Garis Detail Sol -->
+  <path d="M145 385 Q 400 400 660 370" stroke="#C7B79B" stroke-width="3" fill="none" opacity="0.7"/>
+
+  <!-- Upper Body Sepatu -->
+  <path d="M150 355 C 160 310, 220 280, 290 280 C 350 280, 420 230, 470 170 C 490 145, 530 150, 545 185 C 560 220, 560 260, 615 295 C 655 320, 675 335, 645 350 C 560 355, 430 350, 310 354 C 220 357, 145 350, 150 355 Z" fill="url(#leatherGrad)" stroke="#383838" stroke-width="2"/>
+
+  <!-- Overlay Toe Cap -->
+  <path d="M145 355 C 150 320, 190 295, 250 295 C 230 330, 220 355, 145 355 Z" fill="#C7B79B" opacity="0.9"/>
+
+  <!-- Heel Collar & Ankle Support -->
+  <path d="M470 170 C 500 150, 535 155, 545 185 C 555 220, 555 250, 540 280 C 510 260, 480 220, 470 170 Z" fill="#111111"/>
+
+  <!-- Aksen Swoosh / Wave Khas Streetwear -->
+  <path d="M260 310 Q 380 325 540 230 Q 420 370 260 310 Z" fill="#C7B79B"/>
+
+  <!-- Tali Sepatu (Laces) -->
+  <line x1="330" y1="285" x2="360" y2="265" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+  <line x1="365" y1="260" x2="400" y2="235" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+  <line x1="405" y1="230" x2="445" y2="200" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+  <line x1="450" y1="195" x2="495" y2="165" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Tagline Watermark SneakerStudio AI -->
+  <text x="400" y="465" font-family="'Montserrat', sans-serif" font-size="14" font-weight="700" fill="#C7B79B" text-anchor="middle" letter-spacing="4">SNEAKERSTUDIO AI • SAMPLE CLEAN SHOE</text>
+</svg>

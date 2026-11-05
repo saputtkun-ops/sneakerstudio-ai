@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SneakerStudio AI — Editor Desain Instagram Bisnis Cuci Sepatu</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Poppins:wght@400;600;700&family=Montserrat:wght@500;700;800&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="brand-logo-wrap">
+                    <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M3 17.5V19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-1.5c0-2-1.5-3.5-3.5-3.5H16L13.5 9A3 3 0 0 0 11 7H6a3 3 0 0 0-3 3v4c0 1.5.5 2.5 0 3.5z"/>
+                        <path d="M7 11h3"/>
+                        <path d="M6 14h5"/>
+                    </svg>
+                    <div>
+                        <h2 class="brand-title">SneakerStudio <span class="badge-ai">AI</span></h2>
+                        <p class="brand-subtitle">Instagram Design Studio</p>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section-title">Langkah Pembuatan</div>
+                <button class="nav-item active" data-step="1" id="nav-step-1">
+                    <span class="step-num">1</span>
+                    <span class="nav-label">Unggah Foto</span>
+                </button>
+                <button class="nav-item" data-step="2" id="nav-step-2">
+                    <span class="step-num">2</span>
+                    <span class="nav-label">Pilih Kategori</span>
+                </button>
+                <button class="nav-item" data-step="3" id="nav-step-3">
+                    <span class="step-num">3</span>
+                    <span class="nav-label">Rekomendasi Desain</span>
+                </button>
+                <button class="nav-item" data-step="4" id="nav-step-4">
+                    <span class="step-num">4</span>
+                    <span class="nav-label">Editor Desain</span>
+                </button>
+                <button class="nav-item" data-step="5" id="nav-step-5">
+                    <span class="step-num">5</span>
+                    <span class="nav-label">Caption Instagram</span>
+                </button>
+                <button class="nav-item" data-step="6" id="nav-step-6">
+                    <span class="step-num">6</span>
+                    <span class="nav-label">Unduh & Ekspor</span>
+                </button>
+
+                <div class="nav-section-title" style="margin-top: 24px;">Fitur Tambahan</div>
+                <button class="nav-item" data-step="7" id="nav-step-7">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"/>
+                        <rect x="14" y="3" width="7" height="7"/>
+                        <rect x="14" y="14" width="7" height="7"/>
+                        <rect x="3" y="14" width="7" height="7"/>
+                    </svg>
+                    <span class="nav-label">Perencana Feed</span>
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button class="footer-btn" id="btn-open-settings">
+                    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                    </svg>
+                    <span>Identitas Merek</span>
+                </button>
+                <button class="footer-btn" id="btn-open-projects">
+                    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                    </svg>
+                    <span>Proyek Tersimpan</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- MAIN VIEW -->
+        <main class="main-content">
+            <!-- Mobile Toggle -->
+            <div class="mobile-bar">
+                <button id="btn-toggle-sidebar" class="btn-icon">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+                <span class="mobile-title">SneakerStudio AI</span>
+            </div>
+
+            <!-- HALAMAN 1: UNGGAH FOTO & FORMAT -->
+            <section class="page active" id="page-upload">
+                <div class="page-header">
+                    <span class="page-step-badge">Langkah 1 dari 6</span>
+                    <h1 class="page-title">Unggah Foto Sepatu</h1>
+                    <p class="page-desc">Unggah foto sepatu asli pelanggan Anda dan tentukan format postingan Instagram yang diinginkan.</p>
+                </div>
+
+                <!-- Pilihan Format Instagram -->
+                <div class="section-card">
+                    <h3 class="section-title">Pilih Format Desain Instagram</h3>
+                    <div class="format-grid">
+                        <div class="format-card active" data-format="portrait">
+                            <div class="format-aspect-box portrait-box">4:5</div>
+                            <div class="format-info">
+                                <h4>Feed Potret</h4>
+                                <span class="format-res">1080 × 1350 px</span>
+                                <p>Rasio ideal Instagram, menutupi layar feed secara maksimal.</p>
+                            </div>
+                        </div>
+                        <div class="format-card" data-format="square">
+                            <div class="format-aspect-box square-box">1:1</div>
+                            <div class="format-info">
+                                <h4>Feed Persegi</h4>
+                                <span class="format-res">1080 × 1080 px</span>
+                                <p>Format klasik Instagram yang pas untuk feed grid rapi.</p>
+                            </div>
+                        </div>
+                        <div class="format-card" data-format="story">
+                            <div class="format-aspect-box story-box">9:16</div>
+                            <div class="format-info">
+                                <h4>Story / Reels Cover</h4>
+                                <span class="format-res">1080 × 1920 px</span>
+                                <p>Layar penuh vertikal untuk Instagram Stories dan sampul Reels.</p>
+                            </div>
+                        </div>
+                        <div class="format-card" data-format="carousel">
+                            <div class="format-aspect-box carousel-box">4:5 ×</div>
+                            <div class="format-info">
+                                <h4>Carousel Slide</h4>
+                                <span class="format-res">1080 × 1350 px</span>
+                                <p>Khusus konten edukasi multi-slide bertahap.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dropzone Upload Foto -->
+                <div class="section-card" style="margin-top: 24px;">
+                    <h3 class="section-title">Foto Sepatu (JPG, PNG, WebP)</h3>
+                    <div class="upload-zones-row">
+                        <!-- Foto Utama / Sebelum -->
+                        <div class="upload-box" id="zone-main">
+                            <input type="file" id="input-photo-main" accept="image/jpeg,image/png,image/webp" hidden>
+                            <div class="upload-prompt" id="prompt-main">
+                                <div class="upload-icon-circle">
+                                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="17 8 12 3 7 8"/>
+                                        <line x1="12" y1="3" x2="12" y2="15"/>
+                                    </svg>
+                                </div>
+                                <h4 class="upload-title">Foto Utama / Sebelum Cuci</h4>
+                                <p class="upload-sub">Seret & lepas foto ke sini atau <span class="link-text">pilih file</span></p>
+                                <span class="upload-badge">Wajib diisi • Maks. 10MB</span>
+                            </div>
+                            <div class="upload-preview hidden" id="preview-box-main">
+                                <img id="preview-img-main" src="" alt="Foto Utama">
+                                <button class="btn-remove-photo" id="btn-remove-main" title="Hapus foto">&times;</button>
+                                <div class="preview-tag">Foto Utama</div>
+                            </div>
+                        </div>
+
+                        <!-- Foto Sesudah (Opsional) -->
+                        <div class="upload-box" id="zone-after">
+                            <input type="file" id="input-photo-after" accept="image/jpeg,image/png,image/webp" hidden>
+                            <div class="upload-prompt" id="prompt-after">
+                                <div class="upload-icon-circle">
+                                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 5v14M5 12h14"/>
+                                    </svg>
+                                </div>
+                                <h4 class="upload-title">Foto Sesudah Cuci (Opsional)</h4>
+                                <p class="upload-sub">Seret foto hasil pengerjaan atau <span class="link-text">pilih file</span></p>
+                                <span class="upload-badge">Khusus konten Sebelum & Sesudah</span>
+                            </div>
+                            <div class="upload-preview hidden" id="preview-box-after">
+                                <img id="preview-img-after" src="" alt="Foto Sesudah">
+                                <button class="btn-remove-photo" id="btn-remove-after" title="Hapus foto">&times;</button>
+                                <div class="preview-tag">Foto Sesudah (After)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-action-bar">
+                    <div></div>
+                    <button class="btn btn-primary btn-lg" id="btn-to-category">
+                        Lanjut Pilih Kategori Konten
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </section>
+
+            <!-- HALAMAN 2: PILIH KATEGORI KONTEN -->
+            <section class="page" id="page-category">
+                <div class="page-header">
+                    <span class="page-step-badge">Langkah 2 dari 6</span>
+                    <h1 class="page-title">Pilih Kategori Konten</h1>
+                    <p class="page-desc">Tentukan pesan yang ingin Anda sampaikan ke pengikut dan calon pelanggan Anda.</p>
+                </div>
+
+                <div class="category-grid" id="category-grid">
+                    <!-- Di-render otomatis via templates.js & app.js -->
+                </div>
+
+                <div class="page-action-bar">
+                    <button class="btn btn-secondary" id="btn-back-to-upload">
+                        &larr; Kembali ke Unggah Foto
+                    </button>
+                    <button class="btn btn-primary" id="btn-to-recommendations">
+                        Lihat 6 Rekomendasi Desain &rarr;
+                    </button>
+                </div>
+            </section>
+
+            <!-- HALAMAN 3: REKOMENDASI DESAIN -->
+            <section class="page" id="page-recommendations">
+                <div class="page-header">
+                    <span class="page-step-badge">Langkah 3 dari 6</span>
+                    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+                        <div>
+                            <h1 class="page-title">6 Rekomendasi Desain Otomatis</h1>
+                            <p class="page-desc">Desain disesuaikan secara cerdas dengan foto sepatu dan identitas bisnis cuci sepatu Anda.</p>
+                        </div>
+                        <div class="category-current-badge" id="badge-current-category">Promosi Layanan</div>
+                    </div>
+                </div>
+
+                <div class="recommendations-container" id="recommendations-container">
+                    <div class="recommendations-grid" id="recommendations-grid">
+                        <!-- 6 kartu rekomendasi di-render di sini -->
+                    </div>
+                </div>
+
+                <div class="page-action-bar">
+                    <button class="btn btn-secondary" id="btn-back-to-category">
+                        &larr; Ganti Kategori
+                    </button>
+                </div>
+            </section>
+
+            <!-- HALAMAN 4: EDITOR DESAIN VISUAL -->
+            <section class="page" id="page-editor">
+                <div class="editor-header-bar">
+                    <div>
+                        <h2 class="editor-title" id="editor-design-title">Editor Desain Aktif</h2>
+                        <span class="editor-meta" id="editor-design-meta">Format Feed Potret (1080 × 1350)</span>
+                    </div>
+                    <div class="editor-top-actions">
+                        <button class="btn btn-sm btn-outline" id="btn-undo" title="Urungkan (Ctrl+Z)">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 7v6h6"></path>
+                                <path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"></path>
+                            </svg>
+                            Urungkan
+                        </button>
+                        <button class="btn btn-sm btn-outline" id="btn-redo" title="Ulangi (Ctrl+Y)">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 7v6h-6"></path>
+                                <path d="M3 17a9 9 0 0 1 9-9 9 9 0 0 1 6 2.3l3 2.7"></path>
+                            </svg>
+                            Ulangi
+                        </button>
+                        <button class="btn btn-sm btn-secondary" id="btn-save-project-quick">
+                            Simpan Proyek
+                        </button>
+                        <button class="btn btn-sm btn-primary" id="btn-to-caption-page">
+                            Buat Caption &rarr;
+                        </button>
+                        <button class="btn btn-sm btn-accent" id="btn-to-export-direct">
+                            Langsung Unduh &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <div class="editor-workspace">
+                    <!-- Toolbar Kiri -->
+                    <aside class="editor-toolbar">
+                        <button class="tool-btn active" id="tool-select" title="Mode Pilih Objek">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 3l7 18 3-7 7-3L3 3z"/>
+                            </svg>
+                            <span>Pilih</span>
+                        </button>
+                        <button class="tool-btn" id="tool-add-text" title="Tambah Teks">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="4 7 4 4 20 4 20 7"/>
+                                <line x1="9" y1="20" x2="15" y2="20"/>
+                                <line x1="12" y1="4" x2="12" y2="20"/>
+                            </svg>
+                            <span>Teks</span>
+                        </button>
+                        <button class="tool-btn" id="tool-add-rect" title="Tambah Kotak / Badge">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            </svg>
+                            <span>Kotak</span>
+                        </button>
+                        <button class="tool-btn" id="tool-add-circle" title="Tambah Lingkaran">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="9"/>
+                            </svg>
+                            <span>Lingkaran</span>
+                        </button>
+                        <button class="tool-btn" id="tool-add-line" title="Tambah Garis Aksen">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="4" y1="20" x2="20" y2="4"/>
+                            </svg>
+                            <span>Garis</span>
+                        </button>
+
+                        <div class="tool-divider"></div>
+
+                        <button class="tool-btn" id="tool-change-photo" title="Ganti / Tambah Foto Sepatu">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <circle cx="8.5" cy="8.5" r="1.5"/>
+                                <polyline points="21 15 16 10 5 21"/>
+                            </svg>
+                            <span>Ganti Foto</span>
+                        </button>
+                        <input type="file" id="input-replace-photo" accept="image/*" hidden>
+
+                        <button class="tool-btn" id="tool-apply-brand" title="Terapkan Logo Merek">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                            </svg>
+                            <span>Logo Merek</span>
+                        </button>
+
+                        <div class="tool-divider"></div>
+
+                        <button class="tool-btn" id="tool-bring-forward" title="Bawa Maju">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="18 15 12 9 6 15"/>
+                            </svg>
+                            <span>Maju</span>
+                        </button>
+                        <button class="tool-btn" id="tool-send-backward" title="Kirim Mundur">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                            <span>Mundur</span>
+                        </button>
+                        <button class="tool-btn danger-tool" id="tool-delete-object" title="Hapus Objek Terpilih">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="3 6 5 6 21 6"/>
+                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                            </svg>
+                            <span>Hapus</span>
+                        </button>
+                    </aside>
+
+                    <!-- Area Kanvas Tengah -->
+                    <div class="canvas-viewport" id="canvas-viewport">
+                        <div class="canvas-shadow-wrapper" id="canvas-shadow-wrapper">
+                            <canvas id="editor-canvas"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Panel Properti Kanan -->
+                    <aside class="properties-panel" id="properties-panel">
+                        <div class="prop-panel-header">
+                            <h3>Pengaturan Elemen</h3>
+                        </div>
+
+                        <!-- Pesan bila tidak ada elemen dipilih -->
+                        <div class="no-selection-msg" id="prop-empty-state">
+                            <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="16" x2="12" y2="12"/>
+                                <line x1="12" y1="8" x2="12.01" y2="8"/>
+                            </svg>
+                            <p>Klik salah satu teks, foto, atau bentuk pada kanvas untuk mengeditnya.</p>
+                        </div>
+
+                        <!-- Kontrol Elemen Teks -->
+                        <div class="prop-group hidden" id="prop-text-group">
+                            <label class="prop-label">Isi Teks</label>
+                            <textarea id="prop-text-content" rows="3" class="prop-textarea"></textarea>
+
+                            <label class="prop-label">Jenis Huruf (Font)</label>
+                            <select id="prop-text-font" class="prop-select">
+                                <option value="Inter">Inter (Modern & Bersih)</option>
+                                <option value="Playfair Display">Playfair Display (Premium & Elegan)</option>
+                                <option value="Montserrat">Montserrat (Tegas & Tebal)</option>
+                                <option value="Poppins">Poppins (Santai & Dinamis)</option>
+                                <option value="Oswald">Oswald (Huruf Kapital Kuat)</option>
+                            </select>
+
+                            <div class="prop-row">
+                                <div class="prop-col">
+                                    <label class="prop-label">Ukuran Huruf</label>
+                                    <input type="number" id="prop-text-size" min="10" max="200" step="2" class="prop-input">
+                                </div>
+                                <div class="prop-col">
+                                    <label class="prop-label">Warna Teks</label>
+                                    <input type="color" id="prop-text-color" class="prop-color-input">
+                                </div>
+                            </div>
+
+                            <label class="prop-label">Rata Paragraf</label>
+                            <div class="btn-group-align">
+                                <button class="btn-align" data-align="left" id="btn-align-left" title="Rata Kiri">Kiri</button>
+                                <button class="btn-align" data-align="center" id="btn-align-center" title="Rata Tengah">Tengah</button>
+                                <button class="btn-align" data-align="right" id="btn-align-right" title="Rata Kanan">Kanan</button>
+                            </div>
+                        </div>
+
+                        <!-- Kontrol Elemen Bentuk / Warna Latar -->
+                        <div class="prop-group hidden" id="prop-shape-group">
+                            <label class="prop-label">Warna Isian (Fill)</label>
+                            <div class="prop-color-row">
+                                <input type="color" id="prop-shape-fill" class="prop-color-input">
+                                <span class="color-hex-label" id="label-shape-fill">#111111</span>
+                            </div>
+
+                            <label class="prop-label">Transparansi (Opacity)</label>
+                            <input type="range" id="prop-shape-opacity" min="0.05" max="1" step="0.05" value="1" class="prop-slider">
+                        </div>
+
+                        <!-- Palet Warna Cepat Brand -->
+                        <div class="prop-group" style="border-top: 1px solid var(--border); padding-top: 16px; margin-top: 16px;">
+                            <label class="prop-label">Warna Cepat Brand</label>
+                            <div class="quick-colors">
+                                <button class="quick-color-dot" data-color="#111111" style="background:#111111;" title="Hitam Pekat"></button>
+                                <button class="quick-color-dot" data-color="#F7F5F0" style="background:#F7F5F0; border:1px solid #ccc;" title="Putih Gading"></button>
+                                <button class="quick-color-dot" data-color="#FFFFFF" style="background:#FFFFFF; border:1px solid #ccc;" title="Putih Bersih"></button>
+                                <button class="quick-color-dot" data-color="#8A8A85" style="background:#8A8A85;" title="Abu Netral"></button>
+                                <button class="quick-color-dot" data-color="#C7B79B" style="background:#C7B79B;" title="Beige Elegan"></button>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <!-- HALAMAN 5: CAPTION INSTAGRAM -->
+            <section class="page" id="page-caption">
+                <div class="page-header">
+                    <span class="page-step-badge">Langkah 5 dari 6</span>
+                    <h1 class="page-title">Buat Caption Instagram AI</h1>
+                    <p class="page-desc">Pilih gaya penulisan caption dalam Bahasa Indonesia yang otomatis disesuaikan dengan nama bisnis dan layanan Anda.</p>
+                </div>
+
+                <div class="caption-wrapper">
+                    <!-- Pilihan Tone Caption -->
+                    <div class="tone-selector">
+                        <label class="section-title">Pilih Gaya Bahasa (Tone of Voice):</label>
+                        <div class="tone-cards-grid">
+                            <div class="tone-card active" data-style="profesional">
+                                <div class="tone-icon">💎</div>
+                                <h4>Profesional & Premium</h4>
+                                <p>Elegan, terpercaya, menonjolkan kualitas dan keahlian tinggi.</p>
+                            </div>
+                            <div class="tone-card" data-style="santai">
+                                <div class="tone-icon">🔥</div>
+                                <h4>Santai & Anak Muda</h4>
+                                <p>Bahasa akrab, kasual, gaya gaul sneakerhead kekinian.</p>
+                            </div>
+                            <div class="tone-card" data-style="edukatif">
+                                <div class="tone-icon">💡</div>
+                                <h4>Edukatif & Solutif</h4>
+                                <p>Berbagi tips perawatan, bahaya salah cuci, dan wawasan material.</p>
+                            </div>
+                            <div class="tone-card" data-style="promosi">
+                                <div class="tone-icon">⚡</div>
+                                <h4>Promosi & Penawaran</h4>
+                                <p>Fokus ajakan tindakan (CTA), promo terbatas, dan kemudahan booking.</p>
+                            </div>
+                            <div class="tone-card" data-style="sneakers">
+                                <div class="tone-icon">👟</div>
+                                <h4>Budaya Sneakers</h4>
+                                <p>Menghargai nilai koleksi, hype shoes, dan kebanggaan streetwear.</p>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary" id="btn-generate-caption" style="margin-top: 20px;">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                            Hasilkan Variasi Caption Baru
+                        </button>
+                    </div>
+
+                    <!-- Hasil Caption -->
+                    <div class="caption-results">
+                        <div class="caption-box">
+                            <div class="box-header">
+                                <label class="box-label">Teks Caption Siap Posting</label>
+                                <button class="btn-copy-chip" id="btn-copy-caption">Salin Caption</button>
+                            </div>
+                            <textarea id="caption-output" rows="10" class="caption-textarea"></textarea>
+                        </div>
+
+                        <div class="caption-box" style="margin-top: 16px;">
+                            <div class="box-header">
+                                <label class="box-label">Rekomendasi Hashtag Relevan</label>
+                                <button class="btn-copy-chip" id="btn-copy-hashtags">Salin Hashtag</button>
+                            </div>
+                            <textarea id="hashtag-output" rows="3" class="caption-textarea"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-action-bar">
+                    <button class="btn btn-secondary" id="btn-back-to-editor">
+                        &larr; Kembali ke Editor
+                    </button>
+                    <button class="btn btn-primary" id="btn-to-export">
+                        Lanjut ke Unduh & Ekspor &rarr;
+                    </button>
+                </div>
+            </section>
+
+            <!-- HALAMAN 6: UNDUH & EKSPOR -->
+            <section class="page" id="page-export">
+                <div class="page-header">
+                    <span class="page-step-badge">Langkah 6 dari 6 (Selesai)</span>
+                    <h1 class="page-title">Unduh Desain Anda</h1>
+                    <p class="page-desc">Pilih format unduhan. Khusus PPTX, file mempertahankan objek terpisah sehingga dapat diunggah dan diedit bebas di Canva!</p>
+                </div>
+
+                <div class="export-layout">
+                    <!-- Pratinjau Desain Akhir -->
+                    <div class="export-preview-column">
+                        <div class="preview-card-wrap">
+                            <div class="preview-frame">
+                                <img id="export-preview-img" src="" alt="Pratinjau Desain Akhir">
+                            </div>
+                            <div class="preview-specs" id="export-specs">
+                                <span>Resolusi: 1080 × 1350 px</span>
+                                <span>Status: Siap Diunduh</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pilihan 3 Format Unduhan -->
+                    <div class="export-options-column">
+                        <!-- OPSI A: PPTX (UTAMA) -->
+                        <div class="export-card featured-export">
+                            <div class="export-badge-tag">Format Utama Canva</div>
+                            <div class="export-card-header">
+                                <div class="export-icon-box pptx-icon">
+                                    <span>PPTX</span>
+                                </div>
+                                <div>
+                                    <h3 class="export-card-title">PowerPoint (.pptx) — Dapat Diedit di Canva</h3>
+                                    <p class="export-card-desc">Elemen teks, foto sepatu, kotak warna, dan logo tersimpan sebagai <strong>objek terpisah</strong>. Buka Canva &rarr; Unggah file PPTX ini &rarr; seluruh teks dan elemen dapat diedit kembali dengan leluasa.</p>
+                                </div>
+                            </div>
+                            <div class="export-card-footer">
+                                <button class="btn btn-primary btn-lg" id="btn-download-pptx">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="7 10 12 15 17 10"/>
+                                        <line x1="12" y1="15" x2="12" y2="3"/>
+                                    </svg>
+                                    Unduh File PPTX (Untuk Canva)
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- OPSI B: SVG (Vektor) -->
+                        <div class="export-card">
+                            <div class="export-card-header">
+                                <div class="export-icon-box svg-icon">
+                                    <span>SVG</span>
+                                </div>
+                                <div>
+                                    <h3 class="export-card-title">Vektor Standar (.svg)</h3>
+                                    <p class="export-card-desc">Format grafis berbasis vektor. Cocok untuk dibuka di Adobe Illustrator, Figma, CorelDraw, atau Canva Vektor.</p>
+                                </div>
+                            </div>
+                            <div class="export-card-footer">
+                                <button class="btn btn-secondary" id="btn-download-svg">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="7 10 12 15 17 10"/>
+                                        <line x1="12" y1="15" x2="12" y2="3"/>
+                                    </svg>
+                                    Unduh File SVG
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- OPSI C: PNG (Gambar Datar) -->
+                        <div class="export-card">
+                            <div class="export-card-header">
+                                <div class="export-icon-box png-icon">
+                                    <span>PNG</span>
+                                </div>
+                                <div>
+                                    <h3 class="export-card-title">Gambar Datar HD (.png)</h3>
+                                    <p class="export-card-desc">Gambar resolusi tinggi siap langsung diposting ke Instagram. Catatan: Seluruh elemen diratakan (tidak dapat diedit per objek).</p>
+                                </div>
+                            </div>
+                            <div class="export-card-footer">
+                                <button class="btn btn-secondary" id="btn-download-png">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="7 10 12 15 17 10"/>
+                                        <line x1="12" y1="15" x2="12" y2="3"/>
+                                    </svg>
+                                    Unduh Gambar PNG
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-action-bar">
+                    <button class="btn btn-secondary" id="btn-back-to-editor-from-export">
+                        &larr; Kembali ke Editor
+                    </button>
+                    <button class="btn btn-outline" id="btn-to-feed-planner">
+                        Lihat di Perencana Feed (Grid 3×3) &rarr;
+                    </button>
+                </div>
+            </section>
+
+            <!-- HALAMAN 7: PERENCANA FEED INSTAGRAM (3x3 GRID) -->
+            <section class="page" id="page-feed-planner">
+                <div class="page-header">
+                    <span class="page-step-badge">Fitur Eksklusif</span>
+                    <h1 class="page-title">Perencana Feed Instagram (Grid 3 × 3)</h1>
+                    <p class="page-desc">Simulasikan keselarasan visual grid profil akun Instagram bisnis cuci sepatu Anda agar tampil profesional dan menarik pengikut.</p>
+                </div>
+
+                <div class="feed-planner-layout">
+                    <!-- Kolom Kiri: Grid 3x3 Mockup HP -->
+                    <div class="phone-mockup">
+                        <div class="phone-speaker"></div>
+                        <div class="phone-ig-header">
+                            <div class="phone-ig-avatar"></div>
+                            <div>
+                                <strong id="mockup-ig-user">@namabisnis</strong>
+                                <span style="display:block; font-size:11px; color:#888;">Bisnis Cuci Sepatu</span>
+                            </div>
+                        </div>
+
+                        <div class="ig-feed-grid" id="ig-feed-grid">
+                            <!-- 9 Slot Postingan Grid -->
+                            <div class="feed-slot" data-slot="0"><div class="slot-empty-label">+ Slot 1</div></div>
+                            <div class="feed-slot" data-slot="1"><div class="slot-empty-label">+ Slot 2</div></div>
+                            <div class="feed-slot" data-slot="2"><div class="slot-empty-label">+ Slot 3</div></div>
+                            <div class="feed-slot" data-slot="3"><div class="slot-empty-label">+ Slot 4</div></div>
+                            <div class="feed-slot" data-slot="4"><div class="slot-empty-label">+ Slot 5</div></div>
+                            <div class="feed-slot" data-slot="5"><div class="slot-empty-label">+ Slot 6</div></div>
+                            <div class="feed-slot" data-slot="6"><div class="slot-empty-label">+ Slot 7</div></div>
+                            <div class="feed-slot" data-slot="7"><div class="slot-empty-label">+ Slot 8</div></div>
+                            <div class="feed-slot" data-slot="8"><div class="slot-empty-label">+ Slot 9</div></div>
+                        </div>
+
+                        <div class="phone-footer-hint">
+                            Klik slot kosong untuk memasukkan desain saat ini, atau gunakan rekomendasi komposisi.
+                        </div>
+                    </div>
+
+                    <!-- Kolom Kanan: Rekomendasi Komposisi Konten Seimbang -->
+                    <div class="feed-strategy-card">
+                        <div class="strategy-header">
+                            <h3>Rekomendasi Kombinasi 9 Konten Ideal</h3>
+                            <p>Struktur postingan terbaik untuk membangun kepercayaan calon pelanggan cuci sepatu:</p>
+                        </div>
+
+                        <div class="strategy-list">
+                            <div class="strategy-item">
+                                <span class="strategy-number">1</span>
+                                <div class="strategy-text">
+                                    <strong>Sebelum & Sesudah (Transformasi Nyata)</strong>
+                                    <p>Bukti hasil kerja pencucian yang bersih dan memuaskan.</p>
+                                </div>
+                            </div>
+                            <div class="strategy-item">
+                                <span class="strategy-number">2</span>
+                                <div class="strategy-text">
+                                    <strong>Daftar Layanan & Transparansi Harga</strong>
+                                    <p>Memudahkan pelanggan memilih jenis treatment sepatu.</p>
+                                </div>
+                            </div>
+                            <div class="strategy-item">
+                                <span class="strategy-number">3</span>
+                                <div class="strategy-text">
+                                    <strong>Tips Perawatan Sneakers</strong>
+                                    <p>Konten edukasi yang memposisikan bisnis Anda sebagai pakar.</p>
+                                </div>
+                            </div>
+                            <div class="strategy-item">
+                                <span class="strategy-number">4</span>
+                                <div class="strategy-text">
+                                    <strong>Proses Pengerjaan (Behind The Scene)</strong>
+                                    <p>Menunjukkan kehati-hatian tim dalam menangani bahan sepatu premium.</p>
+                                </div>
+                            </div>
+                            <div class="strategy-item">
+                                <span class="strategy-number">5</span>
+                                <div class="strategy-text">
+                                    <strong>Testimoni Kepuasan Pelanggan</strong>
+                                    <p>Ulasan jujur yang meningkatkan rasio konversi pemesanan.</p>
+                                </div>
+                            </div>
+                            <div class="strategy-item">
+                                <span class="strategy-number">6</span>
+                                <div class="strategy-text">
+                                    <strong>Promo Spesial / Paket Hemat</strong>
+                                    <p>Trigger urgensi untuk menarik pelanggan di akhir pekan.</p>
+                                </div>
+                            </div>
+                            <div class="strategy-item">
+                                <span class="strategy-number">7</span>
+                                <div class="strategy-text">
+                                    <strong>Profil Bisnis & Workshop</strong>
+                                    <p>Memperkenalkan lokasi workshop dan komitmen merek Anda.</p>
+                                </div>
+                            </div>
+                            <div class="strategy-item">
+                                <span class="strategy-number">8</span>
+                                <div class="strategy-text">
+                                    <strong>Edukasi Karakteristik Material</strong>
+                                    <p>Perawatan khusus untuk bahan canvas, suede, leather, atau knit.</p>
+                                </div>
+                            </div>
+                            <div class="strategy-item">
+                                <span class="strategy-number">9</span>
+                                <div class="strategy-text">
+                                    <strong>Ajakan Pemesanan (Call to Action)</strong>
+                                    <p>Nomor WhatsApp & jam operasional pick-up / drop-off.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="strategy-actions">
+                            <button class="btn btn-primary" id="btn-fill-current-to-feed">
+                                Pasang Desain Aktif ke Slot Kosong
+                            </button>
+                            <button class="btn btn-outline" id="btn-clear-feed">
+                                Reset Grid Feed
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- MODAL PENGATURAN IDENTITAS MEREK -->
+    <div class="modal" id="modal-settings">
+        <div class="modal-backdrop" id="backdrop-settings"></div>
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2>Pengaturan Identitas Merek</h2>
+                <button class="modal-close" id="btn-close-settings">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-info-text">Data ini akan otomatis diterapkan ke seluruh rekomendasi desain, teks promosi, dan caption Instagram Anda.</p>
+
+                <div class="form-section">
+                    <h4 class="form-section-title">Informasi Utama</h4>
+                    <div class="form-group">
+                        <label>Nama Bisnis</label>
+                        <input type="text" id="setting-biz-name" class="form-input" placeholder="Contoh: CleanKicks Care">
+                    </div>
+                    <div class="form-group">
+                        <label>Tagline / Slogan</label>
+                        <input type="text" id="setting-biz-tagline" class="form-input" placeholder="Contoh: Perawatan Sneakers Premium & Bergaransi">
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h4 class="form-section-title">Kontak & Media Sosial</h4>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Username Instagram</label>
+                            <input type="text" id="setting-biz-ig" class="form-input" placeholder="@cleankickscare">
+                        </div>
+                        <div class="form-group">
+                            <label>Nomor WhatsApp</label>
+                            <input type="text" id="setting-biz-wa" class="form-input" placeholder="0812-3456-7890">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Wilayah Layanan / Kota</label>
+                        <input type="text" id="setting-biz-area" class="form-input" placeholder="Contoh: Jakarta Selatan & Sekitarnya (Bisa Antar-Jemput)">
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h4 class="form-section-title">Daftar Layanan & Harga (Dapat Ditambah/Dihapus)</h4>
+                    <div class="services-edit-list" id="services-edit-list">
+                        <!-- Baris layanan di-render otomatis via settings.js -->
+                    </div>
+                    <button class="btn btn-sm btn-outline" id="btn-add-service-row" style="margin-top: 8px;">
+                        + Tambah Layanan Baru
+                    </button>
+                </div>
+
+                <div class="form-section">
+                    <h4 class="form-section-title">Palet Warna Utama Merek</h4>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Warna Primer</label>
+                            <input type="color" id="setting-primary-color" class="form-color-input" value="#111111">
+                        </div>
+                        <div class="form-group">
+                            <label>Warna Aksen</label>
+                            <input type="color" id="setting-accent-color" class="form-color-input" value="#C7B79B">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="btn-cancel-settings">Batal</button>
+                <button class="btn btn-primary" id="btn-save-settings">Simpan Pengaturan</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL PROYEK TERSIMPAN -->
+    <div class="modal" id="modal-projects">
+        <div class="modal-backdrop" id="backdrop-projects"></div>
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2>Proyek Desain Tersimpan</h2>
+                <button class="modal-close" id="btn-close-projects">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="projects-grid" id="projects-list-container">
+                    <!-- Daftar kartu proyek tersimpan di localStorage -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFIKASI -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- LOADING OVERLAY -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner"></div>
+        <div class="loading-message" id="loading-message">Sedang memproses desain...</div>
+    </div>
+
+    <!-- CDN PUSTAKA PIHAK KETIGA -->
+    <!-- Fabric.js untuk kanvas interaktif -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
+    <!-- PptxGenJS untuk ekspor PPTX dengan objek terpisah kompatibel Canva -->
+    <script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgenjs.bundle.js"></script>
+    <!-- FileSaver.js untuk trigger pengunduhan file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+    <!-- SKRIP APLIKASI SNEAKERSTUDIO AI -->
+    <script src="js/templates.js"></script>
+    <script src="js/upload.js"></script>
+    <script src="js/editor.js"></script>
+    <script src="js/caption.js"></script>
+    <script src="js/export.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/feed-planner.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
